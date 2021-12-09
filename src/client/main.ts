@@ -126,8 +126,8 @@ function main()
     mat4.mul(mvpMatrix, projViewMatrix, modelMatrix);
     const uMvpMatrixLocation = gl.getUniformLocation(program, "uMvpMatrix");
     gl.uniformMatrix4fv(uMvpMatrixLocation, false, mvpMatrix);
-    const uModelMatrix = gl.getUniformLocation(program, "uModelMatrix");
-    gl.uniformMatrix4fv(uModelMatrix, false, modelMatrix);
+    const uModelMatrixLocation = gl.getUniformLocation(program, "uModelMatrix");
+    gl.uniformMatrix4fv(uModelMatrixLocation, false, modelMatrix);
 
     const normalMatrix = mat4.create();
     mat4.invert(normalMatrix, modelMatrix);
